@@ -1,3 +1,3 @@
-module weibo/go_simpleweibo
+module go_simpleweibo
 
 go 1.12
