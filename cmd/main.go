@@ -2,12 +2,10 @@ package main
 
 import (
 	"fmt"
-	BlogModel "go_simpleweibo/app/models/blog"
-	followerModel "go_simpleweibo/app/models/follower"
-	passwordResetModel "go_simpleweibo/app/models/password_reset"
-	userModel "go_simpleweibo/app/models/user"
+	"go_simpleweibo/app/helpers"
 	"go_simpleweibo/config"
-	"go_simpleweibo/database"
+	"go_simpleweibo/routes"
+	"go_simpleweibo/routes/named"
 	"html/template"
 	"net/http"
 
@@ -33,21 +31,6 @@ func main() {
 	// gin config
 	g := gin.New()
 	setupGin(g)
-
-	// db config
-	db := database.InitDB()
-	// db migrate
-	db.AutoMigrate(
-		&userModel.User{},
-		&passwordResetModel.PasswordReset{},
-		&BlogModel.Blog{},
-		&followerModel.Follower{},
-	)
-	// mock data
-	if do := factoryMake(); do {
-		return
-	}
-	defer db.Close()
 
 	// router register
 	routes.Register(g)
@@ -97,9 +80,7 @@ func factoryMake() (do bool) {
 	}
 
 	fmt.Print("\n\n-------------------------------------------------- MOCK --------------------------------------------------\n\n")
-	factory.UsersTableSeeder(true)
-	factory.StatusTableSeeder(true)
-	factory.FollowerTableSeeder(true)
+
 	return true
 }
 

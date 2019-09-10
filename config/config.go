@@ -48,10 +48,10 @@ func InitConfig() {
 	initLog()
 	// 初始化 app 配置
 	AppConfig = newAppConfig()
-	// 初始化数据库配置
-	DBConfig = newDBConfig()
-	// 初始化邮件配置
-	MailConfig = newMailConfig()
+	// // 初始化数据库配置
+	// DBConfig = newDBConfig()
+	// // 初始化邮件配置
+	// MailConfig = newMailConfig()
 
 	// 热更新配置文件
 	watchConfig()

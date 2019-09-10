@@ -85,6 +85,11 @@ https://jasperxu.github.io/gorm-zh/database.html#m
 一句mvc模型，注册实现比较简单
 路由层get展示注册页面，post提交注册表单，在后台数据库实现注册功能
 v->c->m
+
+接口设计
+get api/   Home
+get api/signup  user    注册页面
+post api/create  注册
 ### 会话管理
 ### 用户管理
 ### 邮件发送
