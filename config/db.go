@@ -25,7 +25,7 @@ func newDBConfig() *dbConfig {
 	viper.SetDefault("DB.CONNECTION", "mysql")
 	viper.SetDefault("DB.HOST", "127.0.0.1")
 	viper.SetDefault("DB.PORT", 3306)
-	viper.SetDefault("DB.DATABASE", viper.GetString("APP.NAME"))
+	viper.SetDefault("DB.DATABASE", "simpleweibo")
 	viper.SetDefault("DB.USERNAME", "root")
 	viper.SetDefault("DB.PASSWORD", "")
 

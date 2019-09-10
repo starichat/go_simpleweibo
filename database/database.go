@@ -3,7 +3,9 @@ package database
 import (
 	"fmt"
 	"go_simpleweibo/config"
-	"log"
+
+	_ "github.com/go-sql-driver/mysql"
+	"github.com/lexkong/log"
 
 	"github.com/jinzhu/gorm"
 )

@@ -3,24 +3,25 @@ package config
 import (
 	"fmt"
 
-	"github.com/fsnotify/fsnotify"
 	"github.com/lexkong/log"
+
+	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
 )
 
 const (
-	// runmodeDebug
+	// RunmodeDebug -
 	RunmodeDebug = "debug"
 	// RunmodeRelease -
 	RunmodeRelease = "release"
-	// RunmodeTest
+	// RunmodeTest -
 	RunmodeTest = "test"
 
 	// 配置文件路径
 	configFilePath = "./config.yaml"
-	//　日志文件路径
-	logFilePath = "storage/logs/go_sampleweibo"
-	//　配置文件格式
+	// 日志文件路径
+	logFilePath = "storage/logs/simpleweibo.log"
+	// 配置文件格式
 	configFileType = "yaml"
 )
 
@@ -29,11 +30,13 @@ var (
 	AppConfig *appConfig
 	// DBConfig 数据库配置
 	DBConfig *dbConfig
+	// MailConfig 邮件配置
+	MailConfig *mailConfig
 )
 
-//　初始化配置
+// InitConfig 初始化配置
 func InitConfig() {
-	// 初始化　viper 配置
+	// 初始化 viper 配置
 	viper.SetConfigFile(configFilePath)
 	viper.SetConfigType(configFileType)
 
@@ -47,6 +50,8 @@ func InitConfig() {
 	AppConfig = newAppConfig()
 	// 初始化数据库配置
 	DBConfig = newDBConfig()
+	// 初始化邮件配置
+	MailConfig = newMailConfig()
 
 	// 热更新配置文件
 	watchConfig()
