@@ -16,7 +16,7 @@ var DB *gorm.DB
 func InitDB() *gorm.DB {
 	db, err := gorm.Open(config.DBConfig.Connection, config.DBConfig.URL)
 	if err != nil {
-		log.Fatal("Database connection failed. Database url: " + config.DBConfig.URL + " error: " + error)
+		log.Fatal("Database connection failed. Database url: "+config.DBConfig.URL+" error: ", err)
 	} else {
 		fmt.Println("\n\n-----------------------------GORM OPEN SUCCESS!------------------------------\n\n")
 	}

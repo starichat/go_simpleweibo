@@ -18,7 +18,7 @@ func Auth(handler AuthHandlerFunc) gin.HandlerFunc {
 		// 用户未登录则跳转到登录页
 		currentUser, err := auth.GetCurrentUserFromContext(c)
 		if currentUser == nil || err != nil {
-			controllers.
+			controllers.RedirectToLoginPage(c)
 			return
 		}
 
