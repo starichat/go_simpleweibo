@@ -16,8 +16,8 @@ DB:
 
 MAIL:
   MAIL_DRIVER: smtp # smtp or log (smtp: 使用支持 ESMTP 的 SMTP 服务器发送邮件，log: 适用于调试，会将邮件内容写入 log 中)
-  MAIL_HOST: smtp.mailtrap.io # 邮箱的 SMTP 服务器地址
-  MAIL_PORT: 2525 # 邮箱的 SMTP 服务器端口
-  MAIL_USERNAME:
-  MAIL_PASSWORD: # 授权码或密码
-  MAIL_FROM_NAME: gin_weibo # 用来作为邮件的发送者名称
+  MAIL_HOST: smtp.163.com # 邮箱的 SMTP 服务器地址
+  MAIL_PORT: 143 # 邮箱的 SMTP 服务器端口
+  MAIL_USERNAME: starichat@163.com
+  MAIL_PASSWORD: starichat163 # 授权码或密码
+  MAIL_FROM_NAME: go_simpleweibo # 用来作为邮件的发送者名称

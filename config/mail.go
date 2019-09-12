@@ -19,7 +19,7 @@ func newMailConfig() *mailConfig {
 	viper.SetDefault("MAIL.MAIL_PORT", 25)
 	viper.SetDefault("MAIL.MAIL_USERNAME", "")
 	viper.SetDefault("MAIL.MAIL_PASSWORD", "")
-	viper.SetDefault("MAIL.MAIL_FROM_NAME", "simpleweibo")
+	viper.SetDefault("MAIL.MAIL_FROM_NAME", "go_simpleweibo")
 
 	return &mailConfig{
 		Driver:   viper.GetString("MAIL.MAIL_DRIVER"),

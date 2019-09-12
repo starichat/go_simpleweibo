@@ -1,6 +1,7 @@
 package user
 
 import (
+	"fmt"
 	userModel "go_simpleweibo/app/models/user"
 	"go_simpleweibo/app/requests"
 )
@@ -69,6 +70,8 @@ func (u *UserCreateForm) ValidateAndSave() (user *userModel.User, errors []strin
 	errors = u.Validate()
 
 	if len(errors) != 0 {
+		fmt.Println("--------------------------validate---------------------------")
+
 		return nil, errors
 	}
 
@@ -78,6 +81,7 @@ func (u *UserCreateForm) ValidateAndSave() (user *userModel.User, errors []strin
 		Email:    u.Email,
 		Password: u.Password,
 	}
+	fmt.Println("--------------------------user:---------------------------", user.Email)
 
 	if err := user.Create(); err != nil {
 		errors = append(errors, "用户创建失败: "+err.Error())

@@ -131,6 +131,7 @@ func (fd *FlashData) save(c *gin.Context, keyName string) {
 	for key, value := range fd.Data {
 		flashValue += "\x00" + key + "\x23" + FlashSeparator + "\x23" + value + "\x00"
 	}
+	fmt.Println("save:", keyName)
 	c.SetCookie(keyName, flashValue, 0, "/", "", false, true)
 }
 

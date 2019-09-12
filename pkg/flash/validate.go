@@ -1,6 +1,7 @@
 package flash
 
 import (
+	"fmt"
 	"strings"
 
 	"github.com/gin-gonic/gin"
@@ -17,6 +18,8 @@ func SaveValidateMessage(c *gin.Context, msgArr []string) {
 	f.Data = map[string]string{
 		"errors": strings.Join(msgArr, ValidateSeparator),
 	}
+	fmt.Println("-----2.----")
+	fmt.Println("-----ValiCookie----", ValidateContextAndCookieKeyName)
 	f.save(c, ValidateContextAndCookieKeyName)
 }
 
@@ -25,7 +28,7 @@ func ReadValidateMessage(c *gin.Context) []string {
 	errorStr := read(c, ValidateContextAndCookieKeyName).Data["errors"]
 
 	if errorStr == "" {
-		return []string{}s
+		return []string{}
 	}
 	// 不做上面的判断，Split 切分空字符串会得 [""]
 	return strings.Split(errorStr, ValidateSeparator)
