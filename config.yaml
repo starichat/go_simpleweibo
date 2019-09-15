@@ -12,10 +12,10 @@ DB:
   PORT: 3306
   DATABASE: go_simpleweibo
   USERNAME: root
-  PASSWORD: root
+  PASSWORD: 111111Aa
 
 MAIL:
-  MAIL_DRIVER: smtp # smtp or log (smtp: 使用支持 ESMTP 的 SMTP 服务器发送邮件，log: 适用于调试，会将邮件内容写入 log 中)
+  MAIL_DRIVER: log # smtp or log (smtp: 使用支持 ESMTP 的 SMTP 服务器发送邮件，log: 适用于调试，会将邮件内容写入 log 中)
   MAIL_HOST: smtp.163.com # 邮箱的 SMTP 服务器地址
   MAIL_PORT: 143 # 邮箱的 SMTP 服务器端口
   MAIL_USERNAME: starichat@163.com

@@ -50,8 +50,7 @@ func newDBConfig() *dbConfig {
 }
 
 func createDBURL(uname string, pwd string, name string) string {
-	return fmt.Sprintf("%s:%s@/%s?charset=utf8",
+	return fmt.Sprintf("%s:%s@/%s?charset=utf8&parseTime=%t&loc=%s",
 		uname, pwd,
-
-		name)
+		name, true, "Local")
 }

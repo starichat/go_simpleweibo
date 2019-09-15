@@ -1,6 +1,7 @@
 package routes
 
 import (
+	"go_simpleweibo/app/controllers/blog"
 	"go_simpleweibo/app/controllers/sessions"
 	staticpage "go_simpleweibo/app/controllers/static_page"
 	"go_simpleweibo/app/controllers/user"
@@ -43,6 +44,9 @@ func registerWeb(g *gin.Engine) {
 			// 保存新用户
 			userRouter.POST("", wrapper.Guest((user.Store)))
 			named.Name(userRouter, "users.store", "POST", "")
+			// 展示具体用户页面
+			userRouter.GET("/show/:id", wrapper.Auth(user.Show))
+			named.Name(userRouter, "users.show", "GET", "/show/:id")
 		}
 
 	}
@@ -54,7 +58,42 @@ func registerWeb(g *gin.Engine) {
 		named.Name(g, "login.create", "GET", "/login")
 		// 登录
 		g.POST("/login", wrapper.Guest(sessions.Store))
-		named.Name(g, "login", "POST", "/login")
+		named.Name(g, "login.store", "POST", "/login")
+
+		// 注销登陆
+		g.POST("/logout", sessions.Destroy)
+		named.Name(g, "login.destroy", "POST", "/logout")
+		named.Name(g, "logout", "POST", "/logout")
+	}
+
+	// 重置密码
+	//passwordRouter := g.Group("/password")
+	//{
+	//	//显示重置密码的邮箱发送页面
+	//	passwordRouter.GET("/reset",wrapper.Guest(password.ShowLinkRequestsForm))
+	//	named.Name(passwordRouter, "password.request", "GET", "/reset")
+	//	// 邮箱发送重置链接
+	//	passwordRouter.POST("/email", wrapper.Guest(passoword.SendResetLinkEmail))
+	//	named.Name(passwordRouter, "password.email", "POST", "/email")
+	//	// 密码更新页面
+	//	passwordRouter.GET("/reset/:token", wrapper.Guest(password.ShowResetForm))
+	//	named.Name(passwordRouter, "password.reset", "GET", "/reset/:token")
+	//	// 执行密码更新操作
+	//	passwordRouter.POST("/reset", wrapper.Guest(password.Reset))
+	//	named.Name(passwordRouter, "password.update", "POST", "/reset")
+	//}
+
+	// blog
+	blogRouter := g.Group("/blogs")
+	{
+		// 发布博客
+		blogRouter.POST("",wrapper.Auth(blog.Store))
+		named.Name(blogRouter,"blogs.store","POST","")
+		// 处理删除微博请求
+		blogRouter.POST("/destroy/:id",wrapper.Auth(blog.Destroy))
+		named.Name(blogRouter,"blogs.destroy","POST","/destroy")
+
+
 	}
 
 }

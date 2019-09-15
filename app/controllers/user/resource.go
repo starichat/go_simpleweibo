@@ -2,11 +2,11 @@ package user
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"go_simpleweibo/app/controllers"
+	userModel "go_simpleweibo/app/models/user"
 	userRequest "go_simpleweibo/app/requests/user"
 	"go_simpleweibo/pkg/flash"
-
-	"github.com/gin-gonic/gin"
 )
 
 // Create 创建用户页面
@@ -32,7 +32,6 @@ func Store(c *gin.Context) {
 	user, errors := userCreateForm.ValidateAndSave()
 
 	if len(errors) != 0 || user == nil {
-		fmt.Println("----------------------------ERROR------------------------------------")
 		flash.SaveValidateMessage(c, errors)
 		controllers.RedirectRouter(c, "users.create")
 		return
@@ -46,4 +45,27 @@ func Store(c *gin.Context) {
 	}
 
 	controllers.RedirectRouter(c, "root")
+}
+
+// 展示用户信息
+func Show(c *gin.Context, currentUser *userModel.User) {
+	id,err := controllers.GetIntParam(c,"id")
+	if err != nil {
+		controllers.Render404(c)
+		return
+	}
+
+	// 如果要看的就是当前用户，那么就不用再去数据库中获取了
+	user := currentUser
+	if id !=int(currentUser.ID) {
+		user,err = userModel.Get(id)
+	}
+	if err != nil || user == nil {
+		controllers.Render404(c)
+		return
+	}
+
+
+	controllers.Render(c, "user/show.html",gin.H{})
+
 }

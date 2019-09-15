@@ -21,7 +21,7 @@
           <div class="card-body">
             {{ template "shared/errors" . }}
 
-            <form method="POST" action='{{ Route "login.store" }}?back={{ .back }}'>
+            <form method="POST" action='{{ Route "login.store" }}'>
                 {{ .csrfField }}
 
                 <div class="form-group">

@@ -1,4 +1,4 @@
-package view_models
+package viewmodels
 
 import (
 	blogModel "go_simpleweibo/app/models/blog"

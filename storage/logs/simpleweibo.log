@@ -1,46 +1,12 @@
-{"level":"WARN","timestamp":"2019-09-12 16:02:04.532","file":"user/effect.go:30","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:02:04.591","file":"user/effect.go:30","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:02:04.650","file":"user/effect.go:30","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:06:06.107","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:06:06.166","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:06:06.224","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:07:29.584","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:07:29.642","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:07:29.700","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"INFO","timestamp":"2019-09-12 16:36:24.735","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:36:24.735","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:07.537","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:07.537","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:17.256","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:17.257","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:21.308","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:21.309","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:21.383","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:21.385","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:28.074","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:28.075","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:30.356","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:30.357","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:32.524","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:32.525","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:50.059","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:50.060","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:54.732","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:54.733","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:58.726","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:37:58.726","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:38:36.586","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:38:36.587","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:38:39.527","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:38:39.529","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:38:40.247","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:38:40.248","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"WARN","timestamp":"2019-09-12 16:39:14.354","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:39:14.413","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"WARN","timestamp":"2019-09-12 16:39:14.471","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"INFO","timestamp":"2019-09-12 16:39:36.228","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:39:36.229","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"WARN","timestamp":"2019-09-12 16:47:24.006","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
-{"level":"INFO","timestamp":"2019-09-12 16:53:07.210","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"INFO","timestamp":"2019-09-12 16:53:07.211","file":"config/config.go:65","msg":"Config file changed: ./config.yaml"}
-{"level":"WARN","timestamp":"2019-09-12 17:08:08.781","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
+{"level":"WARN","timestamp":"2019-09-13 20:50:09.654","file":"user/effect.go:33","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
+{"level":"WARN","timestamp":"2019-09-13 21:58:14.134","file":"user/effect.go:27","msg":"用户创建失败: Error 1062: Duplicate entry '904779337@qq.com' for key 'email'"}
+{"level":"WARN","timestamp":"2019-09-13 21:59:45.997","file":"user/effect.go:27","msg":"用户创建失败: Error 1062: Duplicate entry '904779337@qq.com' for key 'email'"}
+{"level":"INFO","timestamp":"2019-09-13 22:04:47.759","file":"config/config.go:65","msg":"Config file changed: config.yaml"}
+{"level":"INFO","timestamp":"2019-09-13 22:06:30.654","file":"mail/mail.go:58","msg":"\n\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n  \u003cmeta charset=\"UTF-8\"\u003e\n  \u003ctitle\u003e注册确认链接\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n  \u003ch1\u003e感谢您在 Weibo App 网站进行注册！\u003c/h1\u003e\n\n  \u003cp\u003e\n    请点击下面的链接完成注册：\n    \u003ca href=\"http://localhost:8888/signup/confirm/CGe0AcFJk9HP81FMYaw3NWcLb7clhV\"\u003e\n      http://localhost:8888/signup/confirm/CGe0AcFJk9HP81FMYaw3NWcLb7clhV\n    \u003c/a\u003e\n  \u003c/p\u003e\n\n  \u003cp\u003e\n    如果这不是您本人的操作，请忽略此邮件。\n  \u003c/p\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n\n"}
+{"level":"INFO","timestamp":"2019-09-13 22:48:14.050","file":"mail/mail.go:58","msg":"\n\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n  \u003cmeta charset=\"UTF-8\"\u003e\n  \u003ctitle\u003e注册确认链接\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n  \u003ch1\u003e感谢您在 Weibo App 网站进行注册！\u003c/h1\u003e\n\n  \u003cp\u003e\n    请点击下面的链接完成注册：\n    \u003ca href=\"http://localhost:8888/signup/confirm/wt0U7P3L6GvRwy5e7KDZ5AB8KGL6X8\"\u003e\n      http://localhost:8888/signup/confirm/wt0U7P3L6GvRwy5e7KDZ5AB8KGL6X8\n    \u003c/a\u003e\n  \u003c/p\u003e\n\n  \u003cp\u003e\n    如果这不是您本人的操作，请忽略此邮件。\n  \u003c/p\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n\n"}
+{"level":"WARN","timestamp":"2019-09-14 12:07:08.144","file":"user/effect.go:27","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
+{"level":"WARN","timestamp":"2019-09-14 12:07:38.460","file":"user/effect.go:27","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
+{"level":"WARN","timestamp":"2019-09-14 12:10:56.866","file":"user/effect.go:27","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
+{"level":"WARN","timestamp":"2019-09-14 12:12:15.248","file":"user/effect.go:27","msg":"用户创建失败: Error 1292: Incorrect datetime value: '0000-00-00' for column 'email_verified_at' at row 1"}
+{"level":"INFO","timestamp":"2019-09-14 12:13:23.159","file":"mail/mail.go:58","msg":"\n\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n  \u003cmeta charset=\"UTF-8\"\u003e\n  \u003ctitle\u003e注册确认链接\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n  \u003ch1\u003e感谢您在 Weibo App 网站进行注册！\u003c/h1\u003e\n\n  \u003cp\u003e\n    请点击下面的链接完成注册：\n    \u003ca href=\"http://localhost:8888/signup/confirm/jgIODTHydDhsERF3Dn2osJITLynTG2\"\u003e\n      http://localhost:8888/signup/confirm/jgIODTHydDhsERF3Dn2osJITLynTG2\n    \u003c/a\u003e\n  \u003c/p\u003e\n\n  \u003cp\u003e\n    如果这不是您本人的操作，请忽略此邮件。\n  \u003c/p\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n\n"}
+{"level":"INFO","timestamp":"2019-09-14 13:56:40.611","file":"mail/mail.go:58","msg":"\n\n\u003c!DOCTYPE html\u003e\n\u003chtml\u003e\n\u003chead\u003e\n  \u003cmeta charset=\"UTF-8\"\u003e\n  \u003ctitle\u003e注册确认链接\u003c/title\u003e\n\u003c/head\u003e\n\u003cbody\u003e\n  \u003ch1\u003e感谢您在 Weibo App 网站进行注册！\u003c/h1\u003e\n\n  \u003cp\u003e\n    请点击下面的链接完成注册：\n    \u003ca href=\"http://localhost:8888/signup/confirm/9EKOZfdTEqYONXZfbuWnLJPPC46Tw4\"\u003e\n      http://localhost:8888/signup/confirm/9EKOZfdTEqYONXZfbuWnLJPPC46Tw4\n    \u003c/a\u003e\n  \u003c/p\u003e\n\n  \u003cp\u003e\n    如果这不是您本人的操作，请忽略此邮件。\n  \u003c/p\u003e\n\u003c/body\u003e\n\u003c/html\u003e\n\n"}

@@ -1,6 +1,7 @@
 package sessions
 
 import (
+	"fmt"
 	"go_simpleweibo/app/auth"
 	"go_simpleweibo/app/controllers"
 	userRequest "go_simpleweibo/app/requests/user"
@@ -11,18 +12,24 @@ import (
 
 // Create 登录界面
 func Create(c *gin.Context) {
+	fmt.Println("login......")
 	controllers.Render(c, "sessions/create.html", gin.H{
-		"back": c.Query("back"),
+		//"back": c.Query("back"),
 	})
+	fmt.Println("login end")
 }
 
 // Store 登录 (创建新会话)
 func Store(c *gin.Context) {
 	// 验证参数并且获取用户
+	fmt.Println("post login")
 	userLoginForm := &userRequest.UserLoginForm{
 		Email:    c.PostForm("email"),
 		Password: c.PostForm("password"),
 	}
+	fmt.Println("----------验证登陆-----------")
+	fmt.Println("---------user:------",userLoginForm.Email)
+	fmt.Println("---------user:------",userLoginForm.Password)
 	user, errors := userLoginForm.ValidateAndGetUser(c)
 
 	if len(errors) != 0 || user == nil {
@@ -41,12 +48,12 @@ func Store(c *gin.Context) {
 	auth.Login(c, user)
 	flash.NewSuccessFlash(c, "欢迎回来！")
 
-	// 返回上次访问的页面
-	back := c.Query("back")
-	if back != "" {
-		controllers.Redirect(c, back, true)
-		return
-	}
+	//// 返回上次访问的页面
+	//back := c.Query("back")
+	//if back != "" {
+	//	controllers.Redirect(c, back, true)
+	//	return
+	//}
 
 	controllers.RedirectRouter(c, "users.show", user.ID)
 }

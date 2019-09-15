@@ -44,7 +44,7 @@ func newAppConfig() *appConfig {
 	viper.SetDefault("APP.ADDR", ":8080")
 	viper.SetDefault("APP.URL", "")
 	viper.SetDefault("APP.KEY", "base64:O+VQ74YEigLPDzLKnh2HW/yjCdU2ON9v7xuKBgSOEAo=")
-	viper.SetDefault("APP.ENABLE_CSRF", true)
+	viper.SetDefault("APP.ENABLE_CSRF", false)
 
 	return &appConfig{
 		Name:    viper.GetString("APP.NAME"),

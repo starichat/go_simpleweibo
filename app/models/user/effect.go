@@ -1,7 +1,6 @@
 package user
 
 import (
-	"fmt"
 	"go_simpleweibo/database"
 	"go_simpleweibo/pkg/utils"
 
@@ -22,16 +21,10 @@ func (u *User) Create() (err error) {
 	// 生成用户激活 token
 	if u.ActivationToken == "" {
 		u.ActivationToken = string(utils.RandomCreateBytes(30))
-		fmt.Println("----Act:", u.ActivationToken)
-		fmt.Println("-----3----")
 	}
-	fmt.Println("-----------------------USER INFO------------------------")
-	fmt.Println(u)
-	fmt.Println("-----------------------USER END------------------------")
 
 	if err = database.DB.Create(&u).Error; err != nil {
 		log.Warnf("用户创建失败: %v", err)
-		fmt.Println("-----3.1----")
 		return err
 	}
 

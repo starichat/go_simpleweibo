@@ -1,6 +1,7 @@
 package helpers
 
 import (
+	"fmt"
 	"go_simpleweibo/config"
 	"go_simpleweibo/pkg/file"
 	"go_simpleweibo/pkg/mail"
@@ -25,6 +26,16 @@ func SendMail(mailTo []string, subject string, templatePath string, tplData map[
 		Subject:  subject,
 		Body:     body,
 	}
+
+	fmt.Println("---------sendMail:-------",mail.Driver)
+	fmt.Println("---------sendMail:-------",mail.Host)
+	fmt.Println("---------sendMail:-------",mail.Port)
+	fmt.Println("---------sendMail:-------",mail.Password)
+	fmt.Println("---------sendMail:-------",mail.User)
+	fmt.Println("---------sendMail:-------",mail.FromName)
+	fmt.Println("---------sendMail:-------",mail.MailTo)
+	fmt.Println("---------sendMail:-------",mail.Subject)
+	fmt.Println("---------sendMail:-------",mail.Body)
 
 	return mail.Send()
 }

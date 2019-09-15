@@ -86,7 +86,8 @@ https://jasperxu.github.io/gorm-zh/database.html#m
 
 ### 用户注册、登录
 实现注册功能
-
+不做权限认证实现get注册页面请求
+post提交注册->发送激活账号邮件->激活账号->注册到数据库
 ### 会话管理
 ### 用户管理
 ### 邮件发送

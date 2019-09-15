@@ -2,6 +2,8 @@ package blog
 
 import "go_simpleweibo/app/models"
 
+const tableName = "blogs"
+
 // blog 博客内容 模型
 type Blog struct {
 	models.BaseModel
@@ -10,5 +12,5 @@ type Blog struct {
 }
 
 func (Blog) TableName() string {
-	return "blogs"
+	return tableName
 }

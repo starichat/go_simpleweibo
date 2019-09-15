@@ -1,6 +1,7 @@
 package user
 
 import (
+	"fmt"
 	userModel "go_simpleweibo/app/models/user"
 	"go_simpleweibo/app/requests"
 
@@ -47,11 +48,13 @@ func (u *UserLoginForm) ValidateAndGetUser(c *gin.Context) (user *userModel.User
 	errors = u.Validate()
 
 	if len(errors) != 0 {
+		fmt.Println(errors)
 		return nil, errors
 	}
 
 	// 通过邮箱获取用户，并且判断密码是否正确
 	user, err := userModel.GetByEmail(u.Email)
+	fmt.Println(user)
 	if err != nil {
 		errors = append(errors, "该邮箱没有注册过用户: "+err.Error())
 		return nil, errors
