@@ -34,7 +34,7 @@ func newDBConfig() *dbConfig {
 	host := viper.GetString("DB.HOST")
 	port := viper.GetInt("DB.PORT")
 	database := viper.GetString("DB.DATABASE")
-	url := createDBURL(username, password, database)
+	url := createDBURL(username, password, host, port, database)
 
 	return &dbConfig{
 		Connection: viper.GetString("DB.CONNECTION"),
@@ -49,8 +49,9 @@ func newDBConfig() *dbConfig {
 
 }
 
-func createDBURL(uname string, pwd string, name string) string {
-	return fmt.Sprintf("%s:%s@/%s?charset=utf8&parseTime=%t&loc=%s",
+func createDBURL(uname string, pwd string, host string, port int, name string) string {
+	return fmt.Sprintf("%s:%s@tcp(%s:%d)/%s?charset=utf8&parseTime=%t&loc=%s",
 		uname, pwd,
+		host, port,
 		name, true, "Local")
 }
