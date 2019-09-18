@@ -8,7 +8,7 @@ import (
 	"go_simpleweibo/pkg/flash"
 
 	"github.com/gin-gonic/gin"
-)
+)	
 
 func Guest(handler gin.HandlerFunc) gin.HandlerFunc {
 	fmt.Println("login 1")
@@ -19,8 +19,11 @@ func Guest(handler gin.HandlerFunc) gin.HandlerFunc {
 			fmt.Println("----------currentuser:",currentUser)
 			flash.NewInfoFlash(c, "您已登录，无需再次操作！")
 			controllers.RedirectRouter(c, "root")
+			fmt.Println("handle(c)")
 			return
 		}
+
+		fmt.Println("handle(c)")
 
 		handler(c)
 	}

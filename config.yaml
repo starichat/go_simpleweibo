@@ -1,8 +1,8 @@
 APP:
   NAME: go_simpleweibo
   RUNMODE: debug # 模式: debug, release, test
-  Addr: :8888 # 端口
-  URL: http://localhost:8888 # 网站 url，内部跳转时会用到该项
+  Addr: :8889 # 端口
+  URL: http://localhost:8889 # 网站 url，内部跳转时会用到该项
   KEY: base64:O+VQ74YEigLPDzLKnh2HW/yjCdU2ON9v7xuKBgSOEAo=
   ENABLE_CSRF: false # 是否开启 csrf
 

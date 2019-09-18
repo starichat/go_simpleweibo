@@ -1,4 +1,4 @@
-package password_reset
+package passwordreset
 
 import "time"
 
