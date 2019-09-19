@@ -1,13 +1,22 @@
-# [练手项目]基于 go 语言简单实现类似 weibo 的网站
-本项目基于https://github.com/Away0x/gin_weibo 实现一个基于go的微博网站
+= 基于 go 语言简单实现简易的 weibo 的网站
+starichat <starichat@163.com>
+v1.0, 2019-09-19
+:toc: right
+
+== Introduce
+[练手项目]基于 go 语言简单实现的简易 weibo 的网站
+文档内容采用asciidoc语法构建。避免了markdown语法规则不一致
+
+[计划]
+基于https://github.com/Away0x/gin_weibo 实现一个基于go的微博网站
 
 主要技术架构：
 gin + gorm
 
-## 功能简图
+=== 功能简图
 https://cdn.learnku.com/uploads/images/201812/14/1/jn0GCr52Zm.png!large
 
-## 用例划分
+=== 用例划分
 用户：
 -- 注册
 -- 激活
@@ -17,9 +26,41 @@ https://cdn.learnku.com/uploads/images/201812/14/1/jn0GCr52Zm.png!large
 -- 取消关注
 -- 登录、注销
 -- 发布微博、删除微博
--- 查看用户动态流
+-- 查看用户微博流
 -- 查看关注和粉丝列表页面
 -- 查看个人中心
+
+## 接口设计
+根据以上用例分析定义以下接口：
+[options="header"]
+|===
+|请求类型|请求路由|请求参数|权限认证
+|get|api/about|home|root|help|null|auth
+|post|api/login|LoginForm{email,password}| |
+|post|users|CreateUserForm{email,name,password,password_confirmation}| |
+|post|logout||
+|Post|password/email|{email}|
+|post|password/reset|{token,password,password_confirmation}||
+|post|blogs|{content,user_id}||
+|post|blogs|blogs/destroy||
+
+用户相关
+get users/create 
+get users 
+get users/show/[id]
+get users/edit/[id]
+post users/update/[id]
+post users/destroy/[id]
+get users/follwings[id]
+get users/followers[id]
+post users/followers/store/[id]
+post users/followers/destroy/[id]
+
+
+
+
+
+
 ## 创建应用
 ### 配置项 viper 构建
 
