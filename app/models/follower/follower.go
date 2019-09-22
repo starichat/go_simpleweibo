@@ -1,5 +1,9 @@
 package follower
 
+const (
+	tableName = "followers"
+)
+	
 // Follower 粉丝用户模型
 type Follower struct {
 	ID         uint `gorm:"column:id;primary_key;AUTO_INCREMENT;not null"`
@@ -8,5 +12,5 @@ type Follower struct {
 }
 
 func (Follower) TableName() string {
-	return "followers"
+	return tableName
 }

@@ -3,6 +3,7 @@ package routes
 import (
 	"go_simpleweibo/app/controllers/blog"
 	"go_simpleweibo/app/controllers/sessions"
+	"go_simpleweibo/app/controllers/followers"
 	staticpage "go_simpleweibo/app/controllers/static_page"
 	"go_simpleweibo/app/controllers/password"
 	"go_simpleweibo/app/controllers/user"
@@ -48,6 +49,10 @@ func registerWeb(g *gin.Engine) {
 			// 展示具体用户页面
 			userRouter.GET("/show/:id", wrapper.Auth(user.Show))
 			named.Name(userRouter, "users.show", "GET", "/show/:id")
+			// 关注用户
+			userRouter.POST("/followers/store/:id", wrapper.Auth(followers.Store))
+			named.Name(userRouter, "followers.store", "POST", "/followers/store/:id")
+			
 		}
 
 	}

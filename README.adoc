@@ -30,7 +30,7 @@ https://cdn.learnku.com/uploads/images/201812/14/1/jn0GCr52Zm.png!large
 -- 查看关注和粉丝列表页面
 -- 查看个人中心
 
-## 接口设计
+== 接口设计
 根据以上用例分析定义以下接口：
 [options="header"]
 |===
