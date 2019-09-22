@@ -8,7 +8,14 @@ v1.0, 2019-09-19
 文档内容采用asciidoc语法构建。避免了markdown语法规则不一致
 
 [计划]
-基于https://github.com/Away0x/gin_weibo 实现一个基于go的微博网站
+1. 基于https://github.com/Away0x/gin_weibo 实现一个基于go的微博网站(前后端不分离模式开发）
+2. 重构为前后端分离
+[任务模块划分]
+1 用户管理系统
+2 博客内容管理管理系统
+3 关注取关管理
+
+目前已基本完成基本功能，除了一些get请求和页面的协调
 
 主要技术架构：
 gin + gorm

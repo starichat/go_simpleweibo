@@ -52,6 +52,9 @@ func registerWeb(g *gin.Engine) {
 			// 关注用户
 			userRouter.POST("/followers/store/:id", wrapper.Auth(followers.Store))
 			named.Name(userRouter, "followers.store", "POST", "/followers/store/:id")
+			// 取消关注用户
+			userRouter.POST("/followers/destroy/:id", wrapper.Auth(followers.Destroy))
+			named.Name(userRouter, "followers.destroy", "POST", "/followers/destroy/:id")
 			
 		}
 

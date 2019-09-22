@@ -8,10 +8,10 @@ APP:
 
 DB:
   CONNECTION: mysql
-  HOST: 192.168.164.168 #127.0.0.1
+  HOST:  127.0.0.1 #192.168.164.168
   PORT: 3306
   DATABASE: go_simpleweibo
-  USERNAME: wxl
+  USERNAME: root # wxl
   PASSWORD: 111111Aa
 
 MAIL:
